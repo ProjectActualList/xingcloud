@@ -1,0 +1,13 @@
+spring:
+  # 安全配置
+  security:
+    user:
+      name: ENC(dKbMPdadTH+mSTUVWoSrYQ==)     # xing
+      password: ENC(dKbMPdadTH+mSTUVWoSrYQ==) # xing
+  boot:
+    admin:
+      ui:
+        resource-locations: 'classpath:/ui/,classpath:/static/'
+        template-location: 'classpath:/ui/'
+        title: 'xing 服务状态监控'
+        brand: 'xing 服务状态监控'

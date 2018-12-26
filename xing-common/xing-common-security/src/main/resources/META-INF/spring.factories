@@ -1,0 +1,5 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.xing.common.security.filter.TenantContextHolderFilter,\
+  com.xing.common.security.feign.XingFeignClientConfiguration,\
+  com.xing.common.security.feign.XingFeignTenantConfiguration,\
+  com.xing.common.security.service.XingUserDetailsServiceImpl

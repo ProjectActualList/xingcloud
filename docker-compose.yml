@@ -1,0 +1,111 @@
+version: '2'
+services:
+  pigx-mysql:
+    build:
+      context: ./
+      dockerfile: ./doc/db/Dockerfile
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    restart: always
+    container_name: xing-mysql
+    image: xing-mysql
+    ports:
+      - 3306:3306
+
+  pigx-zookeeper:
+    image: zookeeper:3.4.13
+    restart: always
+
+  pigx-redis:
+    image: redis:4.0.10
+    restart: always
+    container_name: xing-redis
+
+  pigx-eureka:
+    build:
+      context: ./
+      dockerfile: ./xing-eureka/Dockerfile
+    restart: always
+    container_name: xing-eureka
+    image: xing-eureka
+    ports:
+      - 8761:8761
+
+  pigx-config:
+    build:
+      context: ./
+      dockerfile: ./xing-config/Dockerfile
+    restart: always
+    container_name: xing-config
+    image: xing-config
+
+  pigx-gateway:
+    build:
+      context: ./
+      dockerfile: ./xing-gateway/Dockerfile
+    restart: always
+    container_name: xing-gateway
+    image: xing-gateway
+    ports:
+      - 9999:9999
+
+  pigx-auth:
+    build:
+      context: ./
+      dockerfile: ./xing-auth/Dockerfile
+    restart: always
+    container_name: xing-auth
+    image: xing-auth
+
+  pigx-upms:
+    build:
+      context: ./
+      dockerfile: ./xing-upms/xing-upms-biz/Dockerfile
+    restart: always
+    container_name: xing-upms
+    image: xing-upms
+
+  pigx-monitor:
+    build:
+      context: ./
+      dockerfile: ./xing-visual/xing-monitor/Dockerfile
+    restart: always
+    image: xing-monitor
+    container_name: xing-monitor
+    ports:
+      - 5001:5001
+
+  pigx-daemon:
+    build:
+      context: ./
+      dockerfile: ./xing-visual/xing-daemon/Dockerfile
+    restart: always
+    image: xing-daemon
+    container_name: xing-daemon
+
+  pigx-codegen:
+    build:
+      context: ./
+      dockerfile: ./xing-visual/xing-codegen/Dockerfile
+    restart: always
+    image: xing-codegen
+    container_name: xing-codegen
+
+  pigx-activiti:
+    build:
+      context: ./
+      dockerfile: ./xing-visual/xing-activiti/Dockerfile
+    restart: always
+    image: xing-activiti
+    container_name: xing-activiti
+
+  pigx-tx-manager:
+    build:
+      context: ./
+      dockerfile: ./xing-visual/xing-tx-manager/Dockerfile
+    restart: always
+    image: xing-tx-manager
+    container_name: xing-tx-manager
+    ports:
+      - 5004:5004
+      - 9998:9998
