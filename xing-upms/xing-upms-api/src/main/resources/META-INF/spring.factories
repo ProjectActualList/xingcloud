@@ -1,0 +1,7 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.xing.admin.api.feign.fallback.UserServiceApiApiFallbackImpl,\
+  com.xing.admin.api.feign.fallback.LogServiceApiFallbackImpl,\
+  com.xing.admin.api.feign.fallback.TokenServiceApiApiFallbackImpl,\
+  com.xing.admin.api.feign.factory.UserServiceApiFallbackFactory,\
+  com.xing.admin.api.feign.factory.LogServiceApiFallbackFactory,\
+  com.xing.admin.api.feign.factory.TokenServiceApiFallbackFactory

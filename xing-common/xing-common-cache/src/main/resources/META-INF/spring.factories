@@ -1,0 +1,5 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+    com.xing.common.cache.RedisTemplateConfig,\
+    com.xing.common.cache.RedisCacheManagerConfig,\
+    com.xing.common.cache.RedisCacheAutoConfiguration
+
