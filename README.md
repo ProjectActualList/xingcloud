@@ -2,6 +2,8 @@
 
 #### 项目介绍
 xing
+Finchley.SR2
+2.0.7.RELEASE
 
 #### 软件架构
 软件架构说明

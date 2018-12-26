@@ -4,35 +4,34 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.xing</groupId>
-	<artifactId>xing</artifactId>
-	<version>2.0.0</version>
-	<name>${project.artifactId}</name>
+	<artifactId>xing-parent</artifactId>
+	<version>1.0.0</version>
 	<packaging>pom</packaging>
 
-	<properties>
+    <name>${project.artifactId}</name>
+    <description>The parent project of xingcloud</description>
+    <url>https://github.com/XingCloudSpace/xingcloud</url>
+
+    <properties>
+		<!-- spring-boot -->
 		<spring-boot.version>2.0.7.RELEASE</spring-boot.version>
-		<spring-cloud.version>Finchley.SR2</spring-cloud.version>
-		<spring-platform.version>Cairo-SR6</spring-platform.version>
+		<spring-boot-admin.version>2.0.4</spring-boot-admin.version>
+
+		<!-- for maven compiler plugin -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
-		<spring-boot-admin.version>2.0.4</spring-boot-admin.version>
-		<hutool.version>4.3.0</hutool.version>
-		<mybatis-plus.version>3.0.6</mybatis-plus.version>
-		<kaptcha.version>0.0.9</kaptcha.version>
-		<swagger.version>2.9.2</swagger.version>
-		<curator.version>2.10.0</curator.version>
-		<velocity.version>1.7</velocity.version>
-		<lcn.version>4.1.0</lcn.version>
+		<maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
+
 		<jasypt.version>2.1.0</jasypt.version>
-		<ttl.version>2.10.1</ttl.version>
-		<elastic-job-lite.version>2.1.5</elastic-job-lite.version>
-		<mysql.connector.version>8.0.13</mysql.connector.version>
-		<security.oauth.version>2.3.3.RELEASE</security.oauth.version>
-		<jackson.modules>2.9.6</jackson.modules>
-		<activiti.version>5.22.0</activiti.version>
+
+		<!-- for docker compiler plugin -->
+		<docker-maven-plugin.version>0.4.12</docker-maven-plugin.version>
 		<docker.url>http://192.168.0.13:4243</docker.url>
+
 		<registry.url>192.168.0.13:5000</registry.url>
+
+		<git-commit.version>2.2.5</git-commit.version>
 	</properties>
 
 	<dependencies>
@@ -91,41 +90,21 @@
 		<module>xing-upms</module>
 		<module>xing-common</module>
 		<module>xing-visual</module>
-	</modules>
+        <module>xing-dependencies-bom</module>
+        <module>xing-bom</module>
+    </modules>
 
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-dependencies</artifactId>
-				<version>${spring-boot.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-			<dependency>
-				<groupId>io.spring.platform</groupId>
-				<artifactId>platform-bom</artifactId>
-				<version>${spring-platform.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework.cloud</groupId>
-				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>${spring-cloud.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-			<!--jackson模块-->
-			<dependency>
-				<groupId>com.fasterxml.jackson.module</groupId>
-				<artifactId>jackson-modules-java8</artifactId>
-				<version>${jackson.modules}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.xing</groupId>
+                <artifactId>xing-dependencies-bom</artifactId>
+                <version>1.0.0</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 	<build>
 		<finalName>${project.name}</finalName>
@@ -155,7 +134,7 @@
 				<plugin>
 					<groupId>com.spotify</groupId>
 					<artifactId>docker-maven-plugin</artifactId>
-					<version>0.4.12</version>
+					<version>${docker-maven-plugin.version}</version>
 					<configuration>
 						<imageName>${registry.url}/${project.name}:0.0.1</imageName>
 						<dockerHost>${docker.url}</dockerHost>
@@ -176,7 +155,7 @@
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.8.0</version>
+				<version>${maven-compiler-plugin.version}</version>
 				<configuration>
 					<target>${maven.compiler.target}</target>
 					<source>${maven.compiler.source}</source>
@@ -186,7 +165,7 @@
 			<plugin>
 				<groupId>pl.project13.maven</groupId>
 				<artifactId>git-commit-id-plugin</artifactId>
-				<version>2.2.5</version>
+				<version>${git-commit.version}</version>
 			</plugin>
 		</plugins>
 	</build>
