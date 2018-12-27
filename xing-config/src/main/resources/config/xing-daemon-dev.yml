@@ -13,7 +13,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: xing1618
-    url: jdbc:mysql://xing-mysql:3306/pigxx?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8
+    url: jdbc:mysql://xing-mysql:3306/xing?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8&allowMultiQueries=true
   elasticjob:
     # 分布式任务协调依赖zookeeper
     zookeeper:
@@ -22,31 +22,31 @@ spring:
     # 普通任务
     simples:
       spring-simple-job:
-        job-class: com.pig4cloud.pigx.daemon.job.PigxSimpleJob
+        job-class: com.xing.daemon.job.PigxSimpleJob
         cron: 0 0 0/1 * * ?
         sharding-total-count: 3
         sharding-item-parameters: 0=service1,1=service2,2=service3
         eventTraceRdbDataSource: 'dataSource'
         listener:
-          listener-class: com.pig4cloud.pigx.daemon.listener.PigxElasticJobListener
+          listener-class: com.xing.daemon.listener.PigxElasticJobListener
       spring-simple-job2:
-        job-class: com.pig4cloud.pigx.daemon.job.PigxSimpleJob2
+        job-class: com.xing.daemon.job.PigxSimpleJob2
         cron: 0 0 0/1 * * ?
         sharding-total-count: 3
         sharding-item-parameters: 0=service1,1=service2,2=service3
         eventTraceRdbDataSource: 'dataSource'
         listener:
-          listener-class: com.pig4cloud.pigx.daemon.listener.PigxElasticJobListener
+          listener-class: com.xing.daemon.listener.PigxElasticJobListener
     # 简单任务
     dataflows:
       spring-dataflow-job:
-        job-class: com.pig4cloud.pigx.daemon.job.PigxDataflowJob
+        job-class: com.xing.daemon.job.PigxDataflowJob
         cron: 0 0 0/1 * * ?
         sharding-total-count: 3
         sharding-item-parameters: 0=service1,1=service2,2=service3
         streaming-process: true
         eventTraceRdbDataSource: 'dataSource'
         listener:
-          distributed-listener-class: com.pig4cloud.pigx.daemon.listener.PigxDistributeElasticJobListener
+          distributed-listener-class: com.xing.daemon.listener.PigxDistributeElasticJobListener
           started-timeout-milliseconds: 5000
           completed-timeout-milliseconds: 10000
