@@ -1,6 +1,6 @@
 version: '2'
 services:
-  pigx-mysql:
+  xing-mysql:
     build:
       context: ./
       dockerfile: ./doc/db/Dockerfile
@@ -12,16 +12,16 @@ services:
     ports:
       - 3306:3306
 
-  pigx-zookeeper:
+  xing-zookeeper:
     image: zookeeper:3.4.13
     restart: always
 
-  pigx-redis:
+  xing-redis:
     image: redis:4.0.10
     restart: always
     container_name: xing-redis
 
-  pigx-eureka:
+  xing-eureka:
     build:
       context: ./
       dockerfile: ./xing-eureka/Dockerfile
@@ -31,7 +31,7 @@ services:
     ports:
       - 8761:8761
 
-  pigx-config:
+  xing-config:
     build:
       context: ./
       dockerfile: ./xing-config/Dockerfile
@@ -39,7 +39,7 @@ services:
     container_name: xing-config
     image: xing-config
 
-  pigx-gateway:
+  xing-gateway:
     build:
       context: ./
       dockerfile: ./xing-gateway/Dockerfile
@@ -49,7 +49,7 @@ services:
     ports:
       - 9999:9999
 
-  pigx-auth:
+  xing-auth:
     build:
       context: ./
       dockerfile: ./xing-auth/Dockerfile
@@ -57,7 +57,7 @@ services:
     container_name: xing-auth
     image: xing-auth
 
-  pigx-upms:
+  xing-upms:
     build:
       context: ./
       dockerfile: ./xing-upms/xing-upms-biz/Dockerfile
@@ -65,7 +65,7 @@ services:
     container_name: xing-upms
     image: xing-upms
 
-  pigx-monitor:
+  xing-monitor:
     build:
       context: ./
       dockerfile: ./xing-visual/xing-monitor/Dockerfile
@@ -75,7 +75,7 @@ services:
     ports:
       - 5001:5001
 
-  pigx-daemon:
+  xing-daemon:
     build:
       context: ./
       dockerfile: ./xing-visual/xing-daemon/Dockerfile
@@ -83,7 +83,7 @@ services:
     image: xing-daemon
     container_name: xing-daemon
 
-  pigx-codegen:
+  xing-codegen:
     build:
       context: ./
       dockerfile: ./xing-visual/xing-codegen/Dockerfile
@@ -91,7 +91,7 @@ services:
     image: xing-codegen
     container_name: xing-codegen
 
-  pigx-activiti:
+  xing-activiti:
     build:
       context: ./
       dockerfile: ./xing-visual/xing-activiti/Dockerfile
@@ -99,7 +99,7 @@ services:
     image: xing-activiti
     container_name: xing-activiti
 
-  pigx-tx-manager:
+  xing-tx-manager:
     build:
       context: ./
       dockerfile: ./xing-visual/xing-tx-manager/Dockerfile

@@ -10,9 +10,9 @@
 
 	<artifactId>xing-common-core</artifactId>
 	<packaging>jar</packaging>
+	<name>${project.artifactId}</name>
 
 	<description>xing 公共工具类核心包</description>
-
 
 	<dependencies>
 		<!--hutool-->

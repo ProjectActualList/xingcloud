@@ -38,7 +38,7 @@ mvn package -DskipTests
 
 3. 知道大家可能看不懂，右上角切换一波语言吧！
 
-4. 以xing最新的1.6.0的稳定版代码为例，查看配置中心下的```pigx-daemon-dev.yml```文件,与我们目前相关的配置文件如下：
+4. 以xing最新的1.6.0的稳定版代码为例，查看配置中心下的```xing-daemon-dev.yml```文件,与我们目前相关的配置文件如下：
 
 ```yml
 ## 定时任务
@@ -49,12 +49,12 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: 123456
-    url: jdbc:mysql://mysql:3306/pigxx?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://mysql:3306/xing?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai
   elasticjob:
     # 分布式任务协调依赖zookeeper
     zookeeper:
       server-lists: 127.0.0.1:2181
-      namespace: pigx-daemon
+      namespace: xing-daemon
 ```
 
 通过全局配置-注册中心配置,填入以下参数:

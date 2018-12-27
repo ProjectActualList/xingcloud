@@ -14,18 +14,6 @@
 
 	<description>xing 认证授权中心，基于 spring security oAuth2</description>
 
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>com.xing</groupId>
-				<artifactId>xing-bom</artifactId>
-				<version>${project.parent.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
-
 	<dependencies>
 		<!--配置中心客户端-->
 		<dependency>
@@ -36,8 +24,14 @@
 		<dependency>
 			<groupId>com.xing</groupId>
 			<artifactId>xing-upms-api</artifactId>
+			<version>1.0.0</version>
 		</dependency>
-
+		<!--security-->
+		<dependency>
+			<groupId>com.xing</groupId>
+			<artifactId>xing-common-security</artifactId>
+			<version>1.0.0</version>
+		</dependency>
 		<!--JDBC相关-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -48,7 +42,12 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-freemarker</artifactId>
 		</dependency>
-
+		<!--缓存操作相关-->
+		<dependency>
+			<groupId>com.xing</groupId>
+			<artifactId>xing-common-cache</artifactId>
+			<version>1.0.0</version>
+		</dependency>
 		<!--spring security 、oauth、jwt依赖-->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>

@@ -24,8 +24,8 @@
       </form>
     </div>
     <footer>
-      <p>support by: lengleng</p>
-      <p>email: <a href="mailto:wangiegie@gmail.com">wangiegie@gmail.com</a>.</p>
+      <p>support by: xingcloud</p>
+      <p>email: <a href="mailto:weixingmail@126.com">wangiegie@gmail.com</a>.</p>
     </footer>
   </body>
 </html>

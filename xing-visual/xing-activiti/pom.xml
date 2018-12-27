@@ -24,17 +24,17 @@
 		<dependency>
 			<groupId>com.xing</groupId>
 			<artifactId>xing-common-core</artifactId>
-			<version>2.0.0</version>
+			<version>1.0.0</version>
 		</dependency>
 		<dependency>
 			<groupId>com.xing</groupId>
 			<artifactId>xing-upms-api</artifactId>
-			<version>2.0.0</version>
+			<version>1.0.0</version>
 		</dependency>
 		<dependency>
 			<groupId>com.xing</groupId>
 			<artifactId>xing-common-swagger</artifactId>
-			<version>2.0.0</version>
+			<version>1.0.0</version>
 		</dependency>
 		<dependency>
 			<groupId>mysql</groupId>
@@ -100,12 +100,12 @@
 		<dependency>
 			<groupId>com.xing</groupId>
 			<artifactId>xing-common-swagger</artifactId>
-			<version>2.0.0</version>
+			<version>1.0.0</version>
 		</dependency>
 		<dependency>
 			<groupId>com.xing</groupId>
 			<artifactId>xing-common-security</artifactId>
-			<version>2.0.0</version>
+			<version>1.0.0</version>
 		</dependency>
 		<!--undertow容器-->
 		<dependency>

@@ -24,17 +24,16 @@ v 1.4.0 提供了代码图形化生成功能。
 
 ### 升级要点
 
->  升级pigx-ui pigx 到 **v 1.4.0**版本
 >
-> 更新数据库脚本，doc/pigx.sql
+> 更新数据库脚本，doc/xing.sql
 
 ### 开始使用
 
 ##### 项目启动
 
-1.  启动 pigx-eureka、pigx-config、pigx-gateway、pigx-auth、pigx-upms-biz
-2. 启动**PigxCodeGenApplication**
-3. 启动**pigx-ui**
+1.  启动 xing-eureka、xing-config、xing-gateway、xing-auth、xing-upms-server
+2. 启动**XingCodeGenApplication**
+3. 启动**xing-ui**
 
 ##### 界面操作
 
@@ -44,11 +43,11 @@ v 1.4.0 提供了代码图形化生成功能。
 
 2. 选择要生成的表
 
-   > 以下为空则从**pigx-codegen/generator.properties** 获取
+   > 以下为空则从**xing-codegen/generator.properties** 获取
 
    ![](http://obq1lvsd9.bkt.clouddn.com/20180803084058.png)
 
-3. 解压下载的**pigx_code_gen.zip**
+3. 解压下载的**xing_code_gen.zip**
 
    > 生成代码结构，安装前后端 maven 、vue-cli 目录生成，可以覆盖到指定业务模块
 

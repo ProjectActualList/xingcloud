@@ -1,10 +1,10 @@
 # Swagger配置文档
 
 ### 写在最前
-xing集成了Swagger作为API生成与测试框架,xing提供了自动化的配置，让您从繁琐的编码工作中解放出来，快速生成自己定制化的Swagger API文档。
+xingcloud 集成了Swagger作为API生成与测试框架,xingcloud 提供了自动化的配置，让您从繁琐的编码工作中解放出来，快速生成自己定制化的Swagger API文档。
 
 ### 快速使用
-您可以轻松地在xing中引入Swagger:   
+您可以轻松地在 xingcloud 中引入Swagger:   
 
 - 在`pom.xml`中引入以下依赖:
 
@@ -40,15 +40,15 @@ swagger:
   # 描述,默认空
   description: '全宇宙最牛逼的Spring Cloud微服务开发脚手架'
   # 版本,默认空
-  version: '1.4.0'
+  version: '1.0.0'
   # 许可证,默认空
   license: 'Powered By Xing'
   # 许可证URL,默认空
-  licenseUrl: 'https://gitee.com/log4j/pig/wikis'
+  licenseUrl: ''
   # 服务条款URL,默认空
-  terms-of-service-url: 'https://gitee.wang/pig/pigx'
+  terms-of-service-url: ''
   # 文档的host信息，默认：空
-  host: 'https://gitee.wang/pig/pigx'
+  host: ''
   # swagger会解析的包路径,默认为空，扫描所有包
   base-package: '' 
   # swagger会解析的url规则
@@ -60,15 +60,15 @@ swagger:
   # 联系人相关配置
   contact:
     # 联系人姓名，默认空
-    name: '冷冷'
+    name: 'weixing'
     # 联系人Email，默认空
-    email: 'wangiegie@gmail.com'
+    email: 'weixingmail@126.com'
     # 联系人URL，默认空
-    url: 'https://gitee.wang/pig/pigx'
+    url: ''
   # 统一鉴权相关配置
   authorization:
     # 鉴权策略名称，默认空
-    name: 'pigX OAuth'
+    name: 'Xing OAuth'
     # 需要开启鉴权URL的正则，默认匹配所有
     auth-regex: '^.*$'
     # 鉴权作用域列表配置,默认空
@@ -103,7 +103,7 @@ swagger:
 
 ```yaml
 swagger:
-  base-package: com.pig4cloud.pigx.admin.controller
+  base-package: com.xing.admin.controller
 ```
 这样，Swagger只会生成对应包下的API文档，这样，自然也就排除了Spring Boot默认的监控和异常信息处理路径。
 ### 如何在xing Swagger中OAuth2.0 授权
@@ -119,7 +119,7 @@ swagger:
 - 直接操作**sys_oauth_client_details**表
 
 ```sql
-INSERT INTO `pigx`.`sys_oauth_client_details` (
+INSERT INTO `xing`.`sys_oauth_client_details` (
 	`authorities`,
 	`authorized_grant_types`,
 	`web_server_redirect_uri`,
@@ -150,7 +150,7 @@ VALUES
 
 #### 过滤指定客户端
 
-pigx-gateway-dev.yml
+xing-gateway-dev.yml
 
 ```yml
 # 不校验验证码终端

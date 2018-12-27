@@ -5,7 +5,7 @@
  Source Server Type    : MySQL
  Source Server Version : 50723
  Source Host           : localhost
- Source Database       : pigxx_ac
+ Source Database       : xing_ac
 
  Target Server Type    : MySQL
  Target Server Version : 50723

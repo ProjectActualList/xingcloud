@@ -80,8 +80,8 @@ swagger:
   description: 最全最轻便的Spring Cloud微服务开发脚手架
   version: @project.version@
   license: Powered By Xing
-  licenseUrl: https://pig4cloud.com/
-  terms-of-service-url: https://pig4cloud.com/
+  licenseUrl: https://xing-vip.club/
+  terms-of-service-url: https://xing-vip.club/
   contact:
     name:
     email:
