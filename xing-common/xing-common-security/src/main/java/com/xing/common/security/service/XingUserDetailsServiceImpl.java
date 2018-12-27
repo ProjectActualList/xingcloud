@@ -57,6 +57,7 @@ public class XingUserDetailsServiceImpl implements XingUserDetailsService {
 	@Override
 	public UserDetails loadUserBySocial(String inStr) throws UsernameNotFoundException {
 		return getUserDetails(userServiceApi.social(inStr, SecurityConstants.FROM_IN));
+
 	}
 
 	/**

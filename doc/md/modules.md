@@ -16,7 +16,7 @@ xingcloud
 ├── xing-gateway -- Spring Cloud Gateway网关[9999]
 ├── xing-upms -- 通用用户权限管理模块
 ├    └── xing-upms-api -- 通用用户权限管理系统公共api模块
-├    └── xing-upms-biz -- 通用用户权限管理系统业务处理模块[4000]
+├    └── xing-upms-server -- 通用用户权限管理系统业务处理模块[4000]
 └── xing-visual  -- 图形化模块 
 ├    ├── xing-monitor -- Spring Boot Admin监控 [5001]
 ├    ├── xing-daemon -- 分布式调度中心[5002]

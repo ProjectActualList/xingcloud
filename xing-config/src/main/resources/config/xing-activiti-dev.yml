@@ -2,8 +2,8 @@
 security:
   oauth2:
     client:
-      client-id: ENC(OGfWMIaL3QstoAU9sn+K1g==)
-      client-secret: ENC(OGfWMIaL3QstoAU9sn+K1g==)
+      client-id: ENC(OGfWMIaL3QstoAU9sn+K1g==)      #act
+      client-secret: ENC(OGfWMIaL3QstoAU9sn+K1g==)  #act
       scope: server
       ignore-urls:
         - '/actuator/**'

@@ -23,9 +23,9 @@ public class XingAdminApplicationTest {
 		StringEncryptor stringEncryptor = new DefaultLazyEncryptor(new StandardEnvironment());
 
 		//加密方法
-		System.out.println(stringEncryptor.encrypt("xing"));
+		System.out.println(stringEncryptor.encrypt("xing:xing"));
 
 		//解密方法
-		//System.out.println(stringEncryptor.decrypt("cGlnOnBpZw=="));
+		System.out.println(stringEncryptor.decrypt("dKbMPdadTH+mSTUVWoSrYQ=="));
 	}
 }

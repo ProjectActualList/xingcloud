@@ -16,7 +16,7 @@ public interface ServiceNameConstant {
 	/**
 	 * UMPS模块
 	 */
-	String UMPS_SERVICE = "xing-upms-biz";
+	String UMPS_SERVICE = "xing-upms-server";
 
 	/**
 	 * 分布式事务协调服务
