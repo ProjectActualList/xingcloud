@@ -99,6 +99,7 @@
 		<module>xing-upms</module>
 		<module>xing-common</module>
 		<module>xing-visual</module>
+        <module>xing-business</module>
     </modules>
 
 	<dependencyManagement>

@@ -10,7 +10,7 @@
 
 	<artifactId>xing-upms-server</artifactId>
 	<packaging>jar</packaging>
-
+	<name>${project.artifactId}</name>
 	<description>xing 通用用户权限管理系统业务处理模块</description>
 
 	<dependencies>
