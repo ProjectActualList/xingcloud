@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : loc-127.0.0.1
-Source Server Version : 50722
-Source Host           : localhost:3306
+Source Server         : xing
+Source Server Version : 50724
+Source Host           : 132.232.190.138:3306
 Source Database       : xing
 
 Target Server Type    : MYSQL
-Target Server Version : 50722
+Target Server Version : 50724
 File Encoding         : 65001
 
-Date: 2018-12-27 16:14:27
+Date: 2019-01-03 14:51:43
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -220,28 +220,22 @@ CREATE TABLE `sys_dept` (
   `parent_id` int(11) DEFAULT NULL,
   `tenant_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`dept_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='部门管理';
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='部门管理';
 
 -- ----------------------------
 -- Records of sys_dept
 -- ----------------------------
-INSERT INTO `sys_dept` VALUES ('1', '上海吉祥航空物流有限公司', null, '2018-01-22 19:00:23', '2018-12-27 15:50:11', '0', '0', '1');
-INSERT INTO `sys_dept` VALUES ('2', '上海均瑶国际航空旅游社有限公司', null, '2018-01-22 19:00:38', '2018-12-27 16:02:07', '0', '0', '1');
-INSERT INTO `sys_dept` VALUES ('3', '物流事业部', null, '2018-01-22 19:00:44', '2018-12-27 15:50:30', '0', '1', '1');
-INSERT INTO `sys_dept` VALUES ('4', '信息处', null, '2018-01-22 19:00:52', '2018-12-27 15:50:45', '0', '3', '1');
-INSERT INTO `sys_dept` VALUES ('5', 'SH-TEAM', null, '2018-01-22 19:00:57', '2018-12-27 15:52:11', '0', '4', '1');
+INSERT INTO `sys_dept` VALUES ('1', '山东农信', null, '2018-01-22 19:00:23', '2018-09-13 01:46:29', '0', '0', '1');
+INSERT INTO `sys_dept` VALUES ('2', '沙县国际', null, '2018-01-22 19:00:38', '2018-09-13 01:46:30', '0', '0', '1');
+INSERT INTO `sys_dept` VALUES ('3', '潍坊农信', null, '2018-01-22 19:00:44', '2018-09-13 01:46:31', '0', '1', '1');
+INSERT INTO `sys_dept` VALUES ('4', '高新农信', null, '2018-01-22 19:00:52', '2018-10-06 10:41:52', '0', '3', '1');
+INSERT INTO `sys_dept` VALUES ('5', '院校农信', null, '2018-01-22 19:00:57', '2018-10-06 10:42:51', '0', '4', '1');
 INSERT INTO `sys_dept` VALUES ('6', '潍坊学院农信', null, '2018-01-22 19:01:06', '2018-09-13 03:29:10', '1', '5', '1');
-INSERT INTO `sys_dept` VALUES ('7', '旅游部', null, '2018-01-22 19:01:57', '2018-12-27 16:04:30', '0', '2', '1');
-INSERT INTO `sys_dept` VALUES ('8', '旅游产品处', null, '2018-01-22 19:02:03', '2018-12-27 16:04:44', '0', '7', '1');
+INSERT INTO `sys_dept` VALUES ('7', '山东沙县', null, '2018-01-22 19:01:57', '2018-09-13 01:46:42', '0', '2', '1');
+INSERT INTO `sys_dept` VALUES ('8', '潍坊沙县', null, '2018-01-22 19:02:03', '2018-09-13 01:46:43', '0', '7', '1');
 INSERT INTO `sys_dept` VALUES ('9', '高新沙县', null, '2018-01-22 19:02:14', '2018-09-13 01:46:44', '1', '8', '1');
 INSERT INTO `sys_dept` VALUES ('10', '租户2', null, '2018-11-18 13:27:11', '2018-11-18 13:42:19', '0', '0', '2');
-INSERT INTO `sys_dept` VALUES ('11', '院校沙县', null, '2018-12-10 21:19:26', '2018-12-27 16:05:03', '1', '8', '1');
-INSERT INTO `sys_dept` VALUES ('12', 'XA-TEAM', null, '2018-12-27 15:52:29', null, '0', '4', '1');
-INSERT INTO `sys_dept` VALUES ('13', '运营处', null, '2018-12-27 15:52:53', null, '0', '3', '1');
-INSERT INTO `sys_dept` VALUES ('14', '综合管理部', null, '2018-12-27 15:53:28', '2018-12-27 15:54:07', '1', '2', '1');
-INSERT INTO `sys_dept` VALUES ('15', '综合管理部', null, '2018-12-27 15:54:04', null, '0', '1', '1');
-INSERT INTO `sys_dept` VALUES ('16', '销售处', null, '2018-12-27 16:04:58', null, '0', '7', '1');
-INSERT INTO `sys_dept` VALUES ('17', '综合管理部', null, '2018-12-27 16:05:17', null, '0', '2', '1');
+INSERT INTO `sys_dept` VALUES ('11', '院校沙县', null, '2018-12-10 21:19:26', null, '0', '8', '1');
 
 -- ----------------------------
 -- Table structure for sys_dept_relation
@@ -262,33 +256,23 @@ INSERT INTO `sys_dept_relation` VALUES ('1', '1');
 INSERT INTO `sys_dept_relation` VALUES ('1', '3');
 INSERT INTO `sys_dept_relation` VALUES ('1', '4');
 INSERT INTO `sys_dept_relation` VALUES ('1', '5');
-INSERT INTO `sys_dept_relation` VALUES ('1', '12');
-INSERT INTO `sys_dept_relation` VALUES ('1', '13');
-INSERT INTO `sys_dept_relation` VALUES ('1', '15');
 INSERT INTO `sys_dept_relation` VALUES ('2', '2');
 INSERT INTO `sys_dept_relation` VALUES ('2', '7');
 INSERT INTO `sys_dept_relation` VALUES ('2', '8');
-INSERT INTO `sys_dept_relation` VALUES ('2', '16');
-INSERT INTO `sys_dept_relation` VALUES ('2', '17');
+INSERT INTO `sys_dept_relation` VALUES ('2', '11');
 INSERT INTO `sys_dept_relation` VALUES ('3', '3');
 INSERT INTO `sys_dept_relation` VALUES ('3', '4');
 INSERT INTO `sys_dept_relation` VALUES ('3', '5');
-INSERT INTO `sys_dept_relation` VALUES ('3', '12');
-INSERT INTO `sys_dept_relation` VALUES ('3', '13');
 INSERT INTO `sys_dept_relation` VALUES ('4', '4');
 INSERT INTO `sys_dept_relation` VALUES ('4', '5');
-INSERT INTO `sys_dept_relation` VALUES ('4', '12');
 INSERT INTO `sys_dept_relation` VALUES ('5', '5');
 INSERT INTO `sys_dept_relation` VALUES ('7', '7');
 INSERT INTO `sys_dept_relation` VALUES ('7', '8');
-INSERT INTO `sys_dept_relation` VALUES ('7', '16');
+INSERT INTO `sys_dept_relation` VALUES ('7', '11');
 INSERT INTO `sys_dept_relation` VALUES ('8', '8');
+INSERT INTO `sys_dept_relation` VALUES ('8', '11');
 INSERT INTO `sys_dept_relation` VALUES ('10', '10');
-INSERT INTO `sys_dept_relation` VALUES ('12', '12');
-INSERT INTO `sys_dept_relation` VALUES ('13', '13');
-INSERT INTO `sys_dept_relation` VALUES ('15', '15');
-INSERT INTO `sys_dept_relation` VALUES ('16', '16');
-INSERT INTO `sys_dept_relation` VALUES ('17', '17');
+INSERT INTO `sys_dept_relation` VALUES ('11', '11');
 
 -- ----------------------------
 -- Table structure for sys_dict
@@ -310,7 +294,7 @@ CREATE TABLE `sys_dict` (
   KEY `sys_dict_value` (`value`) USING BTREE,
   KEY `sys_dict_label` (`label`) USING BTREE,
   KEY `sys_dict_del_flag` (`del_flag`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='字典表';
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='字典表';
 
 -- ----------------------------
 -- Records of sys_dict
@@ -324,6 +308,8 @@ INSERT INTO `sys_dict` VALUES ('6', '0', '未提交', 'leave_status', '请假状
 INSERT INTO `sys_dict` VALUES ('7', '1', '审批中', 'leave_status', '请假状态', '1', '2018-09-30 02:35:16', '2018-11-24 07:25:25', '请假状态', '0', '1');
 INSERT INTO `sys_dict` VALUES ('8', '2', '完成', 'leave_status', '请假状态', '2', '2018-09-30 02:35:58', '2018-11-24 07:25:28', '请假状态', '0', '1');
 INSERT INTO `sys_dict` VALUES ('9', '9', '驳回', 'leave_status', '请假状态', '9', '2018-09-30 02:36:31', '2018-11-24 07:25:31', '请假状态', '0', '1');
+INSERT INTO `sys_dict` VALUES ('10', '0', '自营', 'sold_type', '产品所属类型', '0', '2019-01-03 12:51:52', '2019-01-03 12:53:10', '自营产品', '0', '1');
+INSERT INTO `sys_dict` VALUES ('11', '1', '商户', 'sold_type', '产品所属类型', '1', '2019-01-03 12:52:35', '2019-01-03 12:53:11', '商户产品', '0', '1');
 
 -- ----------------------------
 -- Table structure for sys_log
@@ -351,29 +337,11 @@ CREATE TABLE `sys_log` (
   KEY `sys_log_request_uri` (`request_uri`) USING BTREE,
   KEY `sys_log_type` (`type`) USING BTREE,
   KEY `sys_log_create_date` (`create_time`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='日志表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='日志表';
 
 -- ----------------------------
 -- Records of sys_log
 -- ----------------------------
-INSERT INTO `sys_log` VALUES ('1', '0', '编辑部门', 'xing', 'admin', '2018-12-27 15:50:10', null, '172.19.35.243', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36', '/dept', 'PUT', '', '55', '0', null, '1');
-INSERT INTO `sys_log` VALUES ('2', '0', '编辑部门', 'xing', 'admin', '2018-12-27 15:50:29', null, '172.19.35.243', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36', '/dept', 'PUT', '', '10', '0', null, '1');
-INSERT INTO `sys_log` VALUES ('3', '0', '编辑部门', 'xing', 'admin', '2018-12-27 15:50:45', null, '172.19.35.243', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36', '/dept', 'PUT', '', '15', '0', null, '1');
-INSERT INTO `sys_log` VALUES ('4', '0', '编辑部门', 'xing', 'admin', '2018-12-27 15:52:10', null, '172.19.35.243', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36', '/dept', 'PUT', '', '12', '0', null, '1');
-INSERT INTO `sys_log` VALUES ('5', '0', '添加部门', 'xing', 'admin', '2018-12-27 15:52:29', null, '172.19.35.243', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36', '/dept', 'POST', '', '27', '0', null, '1');
-INSERT INTO `sys_log` VALUES ('6', '0', '添加部门', 'xing', 'admin', '2018-12-27 15:52:53', null, '172.19.35.243', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36', '/dept', 'POST', '', '14', '0', null, '1');
-INSERT INTO `sys_log` VALUES ('7', '0', '添加部门', 'xing', 'admin', '2018-12-27 15:53:28', null, '172.19.35.243', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36', '/dept', 'POST', '', '15', '0', null, '1');
-INSERT INTO `sys_log` VALUES ('8', '0', '编辑部门', 'xing', 'admin', '2018-12-27 15:53:37', null, '172.19.35.243', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36', '/dept', 'PUT', '', '9', '0', null, '1');
-INSERT INTO `sys_log` VALUES ('9', '0', '添加部门', 'xing', 'admin', '2018-12-27 15:54:04', null, '172.19.35.243', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36', '/dept', 'POST', '', '14', '0', null, '1');
-INSERT INTO `sys_log` VALUES ('10', '0', '删除部门', 'xing', 'admin', '2018-12-27 15:54:07', null, '172.19.35.243', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36', '/dept/14', 'DELETE', '', '13', '0', null, '1');
-INSERT INTO `sys_log` VALUES ('11', '0', '编辑部门', 'xing', 'admin', '2018-12-27 16:02:06', null, '172.19.35.243', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36', '/dept', 'PUT', '', '9', '0', null, '1');
-INSERT INTO `sys_log` VALUES ('12', '0', '编辑部门', 'xing', 'admin', '2018-12-27 16:04:30', null, '172.19.35.243', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36', '/dept', 'PUT', '', '10', '0', null, '1');
-INSERT INTO `sys_log` VALUES ('13', '0', '编辑部门', 'xing', 'admin', '2018-12-27 16:04:44', null, '172.19.35.243', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36', '/dept', 'PUT', '', '11', '0', null, '1');
-INSERT INTO `sys_log` VALUES ('14', '0', '添加部门', 'xing', 'admin', '2018-12-27 16:04:58', null, '172.19.35.243', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36', '/dept', 'POST', '', '13', '0', null, '1');
-INSERT INTO `sys_log` VALUES ('15', '0', '删除部门', 'xing', 'admin', '2018-12-27 16:05:03', null, '172.19.35.243', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36', '/dept/11', 'DELETE', '', '9', '0', null, '1');
-INSERT INTO `sys_log` VALUES ('16', '0', '添加部门', 'xing', 'admin', '2018-12-27 16:05:17', null, '172.19.35.243', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36', '/dept', 'POST', '', '12', '0', null, '1');
-INSERT INTO `sys_log` VALUES ('17', '0', '更新用户信息', 'xing', 'admin', '2018-12-27 16:09:18', null, '172.19.35.243', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36', '/user', 'PUT', '', '123', '0', null, '1');
-INSERT INTO `sys_log` VALUES ('18', '0', '更新用户信息', 'xing', 'admin', '2018-12-27 16:09:43', null, '172.19.35.243', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36', '/user', 'PUT', '', '15', '0', null, '1');
 
 -- ----------------------------
 -- Table structure for sys_menu
@@ -495,6 +463,7 @@ INSERT INTO `sys_oauth_client_details` VALUES ('app', null, 'app', 'server', 'pa
 INSERT INTO `sys_oauth_client_details` VALUES ('daemon', null, 'daemon', 'server', 'password,refresh_token', null, null, null, null, null, 'true', '1');
 INSERT INTO `sys_oauth_client_details` VALUES ('gen', null, 'gen', 'server', 'password,refresh_token', null, null, null, null, null, 'true', '1');
 INSERT INTO `sys_oauth_client_details` VALUES ('test', null, 'test', 'server', 'password,refresh_token', null, null, null, null, null, 'true', '1');
+INSERT INTO `sys_oauth_client_details` VALUES ('upms', null, 'upms', 'server', 'password,refresh_token', null, null, null, null, null, 'true', '1');
 INSERT INTO `sys_oauth_client_details` VALUES ('xing', null, 'xing', 'server', 'password,refresh_token,authorization_code', 'http://localhost:4040/sso1/login,http://localhost:4041/sso1/login', null, null, null, null, 'true', '1');
 
 -- ----------------------------
@@ -633,12 +602,12 @@ CREATE TABLE `sys_route_conf` (
 -- ----------------------------
 -- Records of sys_route_conf
 -- ----------------------------
-INSERT INTO `sys_route_conf` VALUES ('1', '工作流管理模块', 'xing-activiti', '[{\"args\": {\"_genkey_0\": \"/act/**\"}, \"name\": \"Path\"}]', '[]', 'lb://xing-activiti', '0', '2018-11-28 15:56:10');
-INSERT INTO `sys_route_conf` VALUES ('2', '认证中心', 'xing-auth', '[{\"args\": {\"_genkey_0\": \"/auth/**\"}, \"name\": \"Path\"}]', '[{\"args\": {}, \"name\": \"ValidateCodeGatewayFilter\"}, {\"args\": {}, \"name\": \"PasswordDecoderFilter\"}]', 'lb://xing-auth', '0', '2018-11-28 15:56:10');
-INSERT INTO `sys_route_conf` VALUES ('3', '代码生成模块', 'xing-codegen', '[{\"args\": {\"_genkey_0\": \"/gen/**\"}, \"name\": \"Path\"}]', '[]', 'lb://xing-codegen', '0', '2018-11-28 15:56:10');
-INSERT INTO `sys_route_conf` VALUES ('4', '定时任务模块', 'xing-daemon', '[{\"args\": {\"_genkey_0\": \"/daemon/**\"}, \"name\": \"Path\"}]', '[]', 'lb://xing-daemon', '0', '2018-11-28 15:56:10');
-INSERT INTO `sys_route_conf` VALUES ('5', '分布式事务模块', 'xing-tx-manager', '[{\"args\": {\"_genkey_0\": \"/tx/**\"}, \"name\": \"Path\"}]', '[]', 'lb://xing-tx-manager', '0', '2018-11-28 15:56:10');
-INSERT INTO `sys_route_conf` VALUES ('6', '通用权限模块', 'xing-upms-server', '[{\"args\": {\"_genkey_0\": \"/admin/**\"}, \"name\": \"Path\"}]', '[{\"args\": {\"key-resolver\": \"#{@remoteAddrKeyResolver}\", \"redis-rate-limiter.burstCapacity\": \"20\", \"redis-rate-limiter.replenishRate\": \"10\"}, \"name\": \"RequestRateLimiter\"}, {\"args\": {\"name\": \"default\", \"fallbackUri\": \"forward:/fallback\"}, \"name\": \"Hystrix\"}]', 'lb://xing-upms-server', '0', '2018-11-28 15:56:10');
+INSERT INTO `sys_route_conf` VALUES ('1', '工作流管理模块', 'pigx-activiti', '[{\"args\": {\"_genkey_0\": \"/act/**\"}, \"name\": \"Path\"}]', '[]', 'lb://pigx-activiti', '0', '2018-11-28 15:56:10');
+INSERT INTO `sys_route_conf` VALUES ('2', '认证中心', 'pigx-auth', '[{\"args\": {\"_genkey_0\": \"/auth/**\"}, \"name\": \"Path\"}]', '[{\"args\": {}, \"name\": \"ValidateCodeGatewayFilter\"}, {\"args\": {}, \"name\": \"PasswordDecoderFilter\"}]', 'lb://pigx-auth', '0', '2018-11-28 15:56:10');
+INSERT INTO `sys_route_conf` VALUES ('3', '代码生成模块', 'pigx-codegen', '[{\"args\": {\"_genkey_0\": \"/gen/**\"}, \"name\": \"Path\"}]', '[]', 'lb://pigx-codegen', '0', '2018-11-28 15:56:10');
+INSERT INTO `sys_route_conf` VALUES ('4', '定时任务模块', 'pigx-daemon', '[{\"args\": {\"_genkey_0\": \"/daemon/**\"}, \"name\": \"Path\"}]', '[]', 'lb://pigx-daemon', '0', '2018-11-28 15:56:10');
+INSERT INTO `sys_route_conf` VALUES ('5', '分布式事务模块', 'pigx-tx-manager', '[{\"args\": {\"_genkey_0\": \"/tx/**\"}, \"name\": \"Path\"}]', '[]', 'lb://pigx-tx-manager', '0', '2018-11-28 15:56:10');
+INSERT INTO `sys_route_conf` VALUES ('6', '通用权限模块', 'pigx-upms-biz', '[{\"args\": {\"_genkey_0\": \"/admin/**\"}, \"name\": \"Path\"}]', '[{\"args\": {\"key-resolver\": \"#{@remoteAddrKeyResolver}\", \"redis-rate-limiter.burstCapacity\": \"20\", \"redis-rate-limiter.replenishRate\": \"10\"}, \"name\": \"RequestRateLimiter\"}, {\"args\": {\"name\": \"default\", \"fallbackUri\": \"forward:/fallback\"}, \"name\": \"Hystrix\"}]', 'lb://pigx-upms-biz', '0', '2018-11-28 15:56:10');
 
 -- ----------------------------
 -- Table structure for sys_social_details
@@ -704,7 +673,8 @@ CREATE TABLE `sys_user` (
 -- ----------------------------
 -- Records of sys_user
 -- ----------------------------
-INSERT INTO `sys_user` VALUES ('1', 'admin', '$2a$10$s7g5Z0xZT/ILns9vAQwCE.LQ0Amjhj8i9QJD5Eu5AhstzBKKkjKGK', null, '17034642888', null, '1', '2018-04-20 07:15:18', '2018-12-27 16:09:44', '0', '0', 'o_0FT0uyg_H1vVy2H0JpSwlVGhWQ', null, '1');
+INSERT INTO `sys_user` VALUES ('1', 'admin', '$2a$10$RpFJjxYiXdEsAGnWp/8fsOetMuOON96Ntk/Ym2M/RKRyU0GZseaDC', null, '17034642888', null, '1', '2018-04-20 07:15:18', '2018-11-16 23:31:30', '0', '0', 'o_0FT0uyg_H1vVy2H0JpSwlVGhWQ', null, '1');
+INSERT INTO `sys_user` VALUES ('2', 'admin', '$2a$10$RpFJjxYiXdEsAGnWp/8fsOetMuOON96Ntk/Ym2M/RKRyU0GZseaDC', null, '17034642888', null, '10', '2018-04-20 07:15:18', '2018-11-18 13:43:03', '0', '0', 'o_0FT0uyg_H1vVy2H0JpSwlVGhWQ', null, '2');
 
 -- ----------------------------
 -- Table structure for sys_user_role
@@ -721,3 +691,47 @@ CREATE TABLE `sys_user_role` (
 -- ----------------------------
 INSERT INTO `sys_user_role` VALUES ('1', '1');
 INSERT INTO `sys_user_role` VALUES ('2', '2');
+
+-- ----------------------------
+-- Table structure for xing_member
+-- ----------------------------
+DROP TABLE IF EXISTS `xing_member`;
+CREATE TABLE `xing_member` (
+  `id_` bigint(20) NOT NULL,
+  `username` varchar(64) DEFAULT NULL COMMENT '会员名称',
+  `password` varchar(255) DEFAULT NULL,
+  `salt` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL COMMENT '随机盐',
+  `phone` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL COMMENT '简介',
+  `avatar_logo` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL COMMENT '头像',
+  `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP COMMENT '修改时间',
+  `lock_flag` char(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT '0' COMMENT '0-正常，9-锁定',
+  `del_flag` char(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT '0' COMMENT '0-正常，1-删除',
+  `wx_openid` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL COMMENT '微信openid',
+  `qq_openid` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL COMMENT 'QQ openid',
+  PRIMARY KEY (`id_`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='星云平台-会员表';
+
+-- ----------------------------
+-- Records of xing_member
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for xing_member_address
+-- ----------------------------
+DROP TABLE IF EXISTS `xing_member_address`;
+CREATE TABLE `xing_member_address` (
+  `id_` bigint(20) NOT NULL,
+  `member_id` bigint(20) NOT NULL COMMENT '会员ID',
+  `province_code` varchar(6) DEFAULT NULL COMMENT '省编码',
+  `city_code` varchar(6) DEFAULT NULL COMMENT '市编码',
+  `district_code` varchar(6) DEFAULT NULL COMMENT '区编码',
+  `address_` varchar(255) DEFAULT NULL COMMENT '详细地址',
+  `defult_flag` tinyint(1) NOT NULL COMMENT '是否默认地址 0：否，1：是',
+  `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  PRIMARY KEY (`id_`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='星云平台-会员地址表';
+
+-- ----------------------------
+-- Records of xing_member_address
+-- ----------------------------
